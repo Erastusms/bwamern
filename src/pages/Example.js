@@ -1,7 +1,5 @@
 import React, { Component } from "react";
-
-import {InputDate, InputNumber} from "elements/Form";
-
+import InputDate from "elements/Form/InputDate";
 export default class Example extends Component {
   state = {
     value: {
@@ -11,9 +9,8 @@ export default class Example extends Component {
     },
   };
   handleChange = (e) => {
-    this.setState({ value: e.target.value });
+    this.setState({ [e.target.name]: e.target.value });
   };
-
   render() {
     console.log(this.state);
     return (

@@ -5,7 +5,7 @@ import { DateRange } from "react-date-range";
 
 import "./index.scss";
 import "react-date-range/dist/styles.css"; // main css file
-import "react-date-range/dist/theme/default.css/"; // theme css file
+import "react-date-range/dist/theme/default.css"; // theme css file
 
 import formatDate from "utils/formatDate";
 import iconCalendar from "assets/images/icons/icon-calendar.svg";
@@ -43,7 +43,7 @@ export default function Date(props) {
     focus.indexOf(1) < 0 && setIsShowed(false);
   };
 
-  const displayDate = `${value.startDate ? formatDate(value.startDate) : ""} ${
+  const displayDate = `${value.startDate ? formatDate(value.startDate) : ""}${
     value.endDate ? " - " + formatDate(value.endDate) : ""
   }`;
 
