@@ -81,6 +81,7 @@ class BookingForm extends Component {
         <label htmlFor="duration">How long you will stay?</label>
         <InputNumber
           max={30}
+          prefix={"Only "}
           suffix={" night"}
           isSuffixPlural
           onChange={this.updateData}
